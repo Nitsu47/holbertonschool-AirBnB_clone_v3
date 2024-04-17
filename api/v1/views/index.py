@@ -7,4 +7,4 @@ from flask import Flask
 @app_views.route("/status", app_views)
 def json_str():
     """Returns a JSON str"""
-    return ("status": "OK")
+    return {"status": "OK"}
