@@ -15,7 +15,7 @@ def teardown():
     storage.close()
 
 
-app.register_blueprint("app_views", url_prefix="api/v1")
+app.register_blueprint(app_views, url_prefix="api/v1")
 
 
 if __name__ == "__main__":
