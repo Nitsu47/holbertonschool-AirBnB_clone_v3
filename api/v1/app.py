@@ -2,7 +2,7 @@
 """ App module """
 from models import storage
 from api.v1.views import app_views
-from flask import Flask
+from flask import Flask, jsonify
 import os
 
 
@@ -20,7 +20,7 @@ def teardown(exception):
 @app.errorhandler(404)
 def not_found(error):
     """Handles the 404 not found error"""
-    return jsnoify({"error": "Not found"}), 404
+    return jsonify({"error": "Not found"}), 404
 
 
 if __name__ == "__main__":
